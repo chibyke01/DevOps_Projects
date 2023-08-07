@@ -6,15 +6,15 @@ This project PBL(Project Based Project) that gives you the hands on experiences 
 
 After installaton of the Linux machine on the system, you will update to the latest using the below sudo cmds:
 
->su root
+		su root
 
->sudo su
+		sudo su
 
->adduser vboxuser sudo
+		adduser vboxuser sudo
 
->su vboxuser
+		su vboxuser
 
->sudo apt update
+		sudo apt update
 
 >sudo apt upgrade
 
@@ -79,29 +79,43 @@ Killing a process sends a termination message to the given process. There are mu
 
 * **ping** command is a simple utility used to check whether a network is available and if a host is reachable.
 
-	   ````ping google.com````
+	   		ping google.com
+
 
 * **Wget** is a command-line utility for downloading files from the web. With Wget, you can download files using HTTP, HTTPS, and FTP protocols. Wget provides a number of options allowing you to download multiple files, resume downloads, limit the bandwidth, recursive downloads, download in the background, mirror a website, and much more.
 
-```wget https://cdn.kernel.org/pub/linux/kernel/v4.x/linux-4.17.2.tar.xz```
+		wget https://cdn.kernel.org/pub/linux/kernel/v4.x/linux-4.17.2.tar.xz
+
 
 * **uname** command used to print detail information about linux system
 
-		````uname -a````
+		  uname -a
+
 
 * **man** cammand - Provides a user manual of any command that can be run on the Terminal
 
-		`man ls`
+			man ls
 
 ![Image](<File Manipulation-cmds uname9.png>)
 
 
 * **useradd** command is used to create a new user account, only root or users with sudo privileges can use the useradd command to create new user accounts.
 
-		````useradd chibuike````
+		useradd chibuike
+
+
+* **nano** Is a Linux command line editor that can be used open an existing file or to create a new file, by typing nano followed by the file name
+
+		nano filename
 
 
 
+* **vi** command is an interactive text editor that is display-oriented: the screen of your terminalacts as a window into the file you are editing. Changes you make to the file are reflected in what you see.
+
+		vi filename
+
+
+__*Thank you*__
 
 
 
