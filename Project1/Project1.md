@@ -77,6 +77,29 @@ Killing a process sends a termination message to the given process. There are mu
 
 * **ps -aux** command is used to get a detailed process list of all processes.    **-a** View processes of all users rather than just the current user. **-u** Provide detailed information about each of the processes, **-x** Include processes that are controlled not by users but by daemons.
 
+* **ping** command is a simple utility used to check whether a network is available and if a host is reachable.
+
+	   ````ping google.com````
+
+* **Wget** is a command-line utility for downloading files from the web. With Wget, you can download files using HTTP, HTTPS, and FTP protocols. Wget provides a number of options allowing you to download multiple files, resume downloads, limit the bandwidth, recursive downloads, download in the background, mirror a website, and much more.
+
+```wget https://cdn.kernel.org/pub/linux/kernel/v4.x/linux-4.17.2.tar.xz```
+
+* **uname** command used to print detail information about linux system
+
+		````uname -a````
+
+* **man** cammand - Provides a user manual of any command that can be run on the Terminal
+
+		````man ls````
+
+![Image](<File Manipulation-cmds uname9.png>)
+
+
+* **useradd** command is used to create a new user account, only root or users with sudo privileges can use the useradd command to create new user accounts.
+
+		````useradd chibuike````
+
 
 
 
