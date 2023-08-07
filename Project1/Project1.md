@@ -25,7 +25,7 @@ After installaton of the Linux machine on the system, you will update to the lat
 
 ## File Manipulation with Basic Linux Commands
 
-* pwd - command is used to know your Present working directory
+* **pwd** - command is used to know your Present working directory
 * **cd** - to create and navigate through the different file and directories.
 * **ls** - list the files and directory within the system **ls -r** list the subdirectories, **la -a** shows hidden/visible files
 * **cat** command - creates a file or file extension depending on what you intended to create
@@ -33,9 +33,20 @@ After installaton of the Linux machine on the system, you will update to the lat
 
 ![Image](LinuxCommands(Ls,pwd,cd).png)
 
+* **cp** - copies files/directories to another content
+* **mv** - can be used to either move or remain file/directories 
+* **mkdir** - its used to creat a directory
+* **rmdir** - used to remove directory, adding the **-p** can be used to remove or delete directory containing a file
+* **rm** - remove file/files from a directory
+* **touch** - Creates a file
 
+![Image](<File Manipulation-cmds rm5.png>)
 
+* **head** command - prints the first lines of one or more files (or piped data) to standard output. By default, it shows the first 10 lines
+* **tail** command - shows you data from the end of a fil
+* **diff** command - Is used to compare directories in Linux To use the diff command, you will have to follow a simple syntax: **diff -qr deploy1.yml deploy2.yml**
 
+## File Permission and Ownership
 
 
 
