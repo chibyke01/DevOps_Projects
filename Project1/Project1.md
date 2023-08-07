@@ -48,7 +48,34 @@ After installaton of the Linux machine on the system, you will update to the lat
 
 ## File Permission and Ownership
 
+In Linux, they are three(3) types of file permissions: read (r), write (w) and execute (x) permissions. These permissions determine which users can read, write or execute the files.
 
+Files and directories can belong to either the following:
+
+* u   –  Owner of the file
+* g   –  Group
+* o   –  Others
+
+File permissions are listed using the **ls -l** command. The -l flag lists the file permissions. The permissions are arranged in three sets: the user, group and others respectively.
+
+* **chmod** command(change mode) is used to manage file and directory permissions and determines who can access them.
+
+* **chown** command changes user ownership of a file, directory, or link in Linux. 
+
+![Image](<File Manipulation-cmds chmod7.png>)
+
+![Image](<File Manipulation-cmds chmod8.png>)
+
+
+
+* **kill** command can be used when a process becomes unresponsive or is consuming too many resources, you may need to kill it. A root user can kill all processes. You can either add sudo before a command to run it as root, or obtain a root shell with su. Then execute the command.
+Killing a process sends a termination message to the given process. There are multiple types of termination messages including:
+
+	* **SIGKILL** – is the ultimate way of killing a process. It will always kill a process and will 	kill the process abruptly, generating a fatal error. SIGKILL should always work. If it does not work, the operating system has failed.
+
+	* **SIGTERM** – SIGTERM attempts to kill a process, but unlike SIGKILL it may be blocked or otherwise 	handled. It can be considered a gentler way of attempting to terminate a process.
+
+* **ps -aux** command is used to get a detailed process list of all processes.    **-a** View processes of all users rather than just the current user. **-u** Provide detailed information about each of the processes, **-x** Include processes that are controlled not by users but by daemons.
 
 
 
