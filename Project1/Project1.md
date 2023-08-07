@@ -91,7 +91,7 @@ Killing a process sends a termination message to the given process. There are mu
 
 * **man** cammand - Provides a user manual of any command that can be run on the Terminal
 
-		````man ls````
+		`man ls`
 
 ![Image](<File Manipulation-cmds uname9.png>)
 
