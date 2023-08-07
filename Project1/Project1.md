@@ -20,7 +20,7 @@ After installaton of the Linux machine on the system, you will update to the lat
 
 ![Image](<File Manipulation-sudo cmds.png>)
 
-![Image](<File Manipulation-sudo cmds2-1.png>)
+![Alt text](<File Manipulation-sudo cmds2-1.png>)
 
 
 ## File Manipulation with Basic Linux Commands
