@@ -7,13 +7,13 @@ To get started with this project I installed the Git, as this comes with a termi
 
 ## Initializing a Git Repository and Making Commits
 
-Opened the GitBash terminal and signed in using your name and email using the below git cmds as this helps to keep record of activities log information for activities carried out by any individual. 
+1. Open the GitBash terminal and signed in using your name and email using the below git cmds as this helps to keep record of activities log information for activities carried out by any individual. 
 
         git config --global user.name <name>
         git config --global user.email <emailaddress>
 
 
-Create a directory/folder, open the current directory(cd) and run the init cmd as this will create a new local repository in the system. 
+2. Create a directory/folder, open the current directory(cd) and run the init cmd as this will create a new local repository in the system. 
 
         mkdir DevOps_Git
         cd DevOps_Git
@@ -22,7 +22,7 @@ Create a directory/folder, open the current directory(cd) and run the init cmd a
 ![Alt text](image.png)
 
 
-Created files with contents inside, used the commit cmd to move the file and its contents to the local respository. 
+3. Created files with contents inside, used the commit cmd to move the file and its contents to the local respository. 
 
         touch index.txt
         echo "contents in the file" > "filename.txt"
@@ -34,7 +34,7 @@ Created files with contents inside, used the commit cmd to move the file and its
 
 
 ## Git Branches
-Created a new git branch, switched to the new branch, added files to the newly created branch and commit the file to the new branch.
+1. Created a new git branch, switched to the new branch, added files to the newly created branch and commit the file to the new branch.
 
         git branch
         git branch New_Git_DevOps
@@ -47,7 +47,7 @@ Created a new git branch, switched to the new branch, added files to the newly c
 ![Alt text](image-4.png)
 
 
-Switch, Merge and Delete a branch.
+2. Switch, Merge and Delete a branch.
 
         git switch main
         git branch -d New_Git_Devops 
@@ -60,11 +60,11 @@ Switch, Merge and Delete a branch.
 
 ## Remote Repositories/Connecting to Cloud GitHub Repository
 
-Create a new repository in the cloud
+1. Create a new repository in the cloud
 
 ![Alt text](image-7.png)
 
-Run the below cmd to push the Local repository to the cloud.
+2. Run the below cmd to push the Local repository to the cloud.
 
         git remote add origin https://github.com/chibyke01/DevOpsGitBash_Remote.git
         git branch -M main
