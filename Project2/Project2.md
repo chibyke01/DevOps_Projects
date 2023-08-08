@@ -1,19 +1,19 @@
 # GIT PROJECT
 
-GIT is a version control system (VCS) that assist teams to collaborate and track projects.
+**GIT** is a version control system (VCS) that assist teams to collaborate and track projects.
 
-To get started with this project I installed the Git, as this comes with a terminal called GitBash, but other terminals can be used (e.g powershell and windows CLI etc.) but you will be required to install the git terminal if you are using any of the compartiable CLI.
+To get started with this project I installed the Git, as this comes with a terminal called GitBash, but other terminals can be used (e.g powershell and windows CLI etc.) but you will be required to install the git terminal if you are using any of the compartiable _CLI_.
 
 
 ## Initializing a Git Repository and Making Commits
 
-1. Open the GitBash terminal and signed in using your name and email using the below git cmds as this helps to keep record of activities log information for activities carried out by any individual. 
+**1.** Open the GitBash terminal and signed in using your name and email using the below git cmds as this helps to keep record of activities log information for activities carried out by any individual. 
 
-        git config --global user.name <name>
+        **git config --global user.name <name>**
         git config --global user.email <emailaddress>
 
 
-2. Create a directory/folder, open the current directory(cd) and run the init cmd as this will create a new local repository in the system. 
+**2.** Create a directory/folder, open the current directory(cd) and run the init cmd as this will create a new local repository in the system. 
 
         mkdir DevOps_Git
         cd DevOps_Git
@@ -22,7 +22,7 @@ To get started with this project I installed the Git, as this comes with a termi
 ![Alt text](image.png)
 
 
-3. Created files with contents inside, used the commit cmd to move the file and its contents to the local respository. 
+**3.** Created files with contents inside, used the commit cmd to move the file and its contents to the local respository. 
 
         touch index.txt
         echo "contents in the file" > "filename.txt"
@@ -34,7 +34,7 @@ To get started with this project I installed the Git, as this comes with a termi
 
 
 ## Git Branches
-1. Created a new git branch, switched to the new branch, added files to the newly created branch and commit the file to the new branch.
+**1.** Created a new git branch, switched to the new branch, added files to the newly created branch and commit the file to the new branch.
 
         git branch
         git branch New_Git_DevOps
@@ -47,7 +47,7 @@ To get started with this project I installed the Git, as this comes with a termi
 ![Alt text](image-4.png)
 
 
-2. Switch, Merge and Delete a branch.
+**2.** Switch, Merge and Delete a branch.
 
         git switch main
         git branch -d New_Git_Devops 
@@ -60,11 +60,11 @@ To get started with this project I installed the Git, as this comes with a termi
 
 ## Remote Repositories/Connecting to Cloud GitHub Repository
 
-1. Create a new repository in the cloud
+**1.** Create a new repository in the cloud
 
 ![Alt text](image-7.png)
 
-2. Run the below cmd to push the Local repository to the cloud.
+**2.** Run the below cmd to push the Local repository to the cloud.
 
         git remote add origin https://github.com/chibyke01/DevOpsGitBash_Remote.git
         git branch -M main
