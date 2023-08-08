@@ -2,14 +2,14 @@
 
 **GIT** is a version control system (VCS) that assist teams to collaborate and track projects.
 
-To get started with this project I installed the Git, as this comes with a terminal called GitBash, but other terminals can be used (e.g powershell and windows CLI etc.) but you will be required to install the git terminal if you are using any of the compartiable _CLI_.
+To get started with this project I installed the Git, as this comes with a terminal called GitBash, but other terminals can be used (e.g powershell and windows CLI etc.) but you will be required to install the git terminal if you are using any of the compartiable **CLI**.
 
 
 ## Initializing a Git Repository and Making Commits
 
 **1.** Open the GitBash terminal and signed in using your name and email using the below git cmds as this helps to keep record of activities log information for activities carried out by any individual. 
 
-        **git config --global user.name <name>**
+        git config --global user.name <name>
         git config --global user.email <emailaddress>
 
 
