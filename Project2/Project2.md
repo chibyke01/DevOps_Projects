@@ -79,7 +79,7 @@ To push or update any file or folder this can be done using the GitBash terminal
 ![Alt text](Git8.png)
 ![Alt text](image-9.png)
 
-The below screenshot concludes teh success of this project.
+The below screenshot concludes the success of this project.
 
 ![Alt text](<After successful Push.png>)
 
