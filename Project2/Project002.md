@@ -19,7 +19,8 @@ To get started with this project I installed the Git, as this comes with a termi
         cd DevOps_Git
         git init
 
-![Alt text](image.png)
+![image](https://github.com/chibyke01/DevOps_Projects/assets/103823637/eea24879-113f-4591-b56e-46f723a096da)
+
 
 
 **3.** Created files with contents inside, used the commit cmd to move the file and its contents to the local respository. 
@@ -29,8 +30,7 @@ To get started with this project I installed the Git, as this comes with a termi
         git add .
         git commit -m "treat and work to prevent gastrointenstina"
 
-![Alt text](image-1.png)
-
+![image](https://github.com/chibyke01/DevOps_Projects/assets/103823637/c7ae11b6-2f0f-41e1-b01f-2396dd946ba4)
 
 
 ## Git Branches
@@ -43,8 +43,9 @@ To get started with this project I installed the Git, as this comes with a termi
         git add .
         git commit -m "The Story Line"
 
-![Alt text](image-2.png)
-![Alt text](image-4.png)
+![image](https://github.com/chibyke01/DevOps_Projects/assets/103823637/da1eaa09-23a6-4d4d-b4cd-3968afb187df)
+----
+![image](https://github.com/chibyke01/DevOps_Projects/assets/103823637/6628d9dd-3d9a-4327-bebb-c0c3ce611e50)
 
 
 **2.** Switch, Merge and Delete a branch.
@@ -54,15 +55,17 @@ To get started with this project I installed the Git, as this comes with a termi
         git merge "the branch to merge"
         git status
 
-![Alt text](image-5.png)
-![Alt text](image-6.png)
+![image](https://github.com/chibyke01/DevOps_Projects/assets/103823637/e312f59e-8743-4173-b936-61b13a496e3d)
+----
+![image](https://github.com/chibyke01/DevOps_Projects/assets/103823637/91545846-1b8d-4258-b991-936e9f63d879)
 
 
 ## Remote Repositories/Connecting to Cloud GitHub Repository
 
 **1.** Create a new repository in the cloud
 
-![Alt text](image-7.png)
+![image](https://github.com/chibyke01/DevOps_Projects/assets/103823637/4fdd815c-997f-4015-94f6-0af1b84ad442)
+
 
 **2.** Run the below cmd to push the Local repository to the cloud.
 
@@ -72,16 +75,20 @@ To get started with this project I installed the Git, as this comes with a termi
 
 The below output shows a successful push to the cloud repository as the files created previously can be seen in the screenshot below.
 
-![Alt text](image-8.png)
+![image](https://github.com/chibyke01/DevOps_Projects/assets/103823637/4b1742f7-adbe-43ae-8276-b55b1ee6d835)
+
 
 To push or update any file or folder this can be done using the GitBash terminal, create a new file using the GitBash terminal and push to the cloud github.
 
-![Alt text](Git8.png)
-![Alt text](image-9.png)
+![image](https://github.com/chibyke01/DevOps_Projects/assets/103823637/39a6f3bf-0c5c-4fa9-b4bd-1797b9686b43)
+----
+![image](https://github.com/chibyke01/DevOps_Projects/assets/103823637/42c6edc5-cbd4-462f-bbcf-f6ce7ceb676b)
+
 
 The below screenshot concludes the success of this project.
 
-![Alt text](<After successful Push.png>)
+![image](https://github.com/chibyke01/DevOps_Projects/assets/103823637/3a3db8cc-8101-4452-822f-400a2326e061)
+
 
 
 
