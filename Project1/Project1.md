@@ -16,11 +16,12 @@ After installaton of the Linux machine on the system, you will update to the lat
 
 		sudo apt update
 
->sudo apt upgrade
+		sudo apt upgrade
 
-![Image](<File Manipulation-sudo cmds.png>)
+![image](https://github.com/chibyke01/DevOps_Projects/assets/103823637/c3877caa-c5da-435e-bd69-89b998b47408)
+-----
+![image](https://github.com/chibyke01/DevOps_Projects/assets/103823637/424cb8d2-1874-4b7e-b192-673596366646)
 
-![Alt text](<File Manipulation-sudo cmds2-1.png>)
 
 
 ## File Manipulation with Basic Linux Commands
@@ -31,7 +32,8 @@ After installaton of the Linux machine on the system, you will update to the lat
 * **cat** command - creates a file or file extension depending on what you intended to create
 * **tac** command - it deplays the content of the file in a reverse other.
 
-![Image](LinuxCommands(Ls,pwd,cd).png)
+![image](https://github.com/chibyke01/DevOps_Projects/assets/103823637/b88fd872-4d2a-446d-9648-86d06993bf1e)
+
 
 * **cp** - copies files/directories to another content
 * **mv** - can be used to either move or remain file/directories 
@@ -40,7 +42,7 @@ After installaton of the Linux machine on the system, you will update to the lat
 * **rm** - remove file/files from a directory
 * **touch** - Creates a file
 
-![Image](<File Manipulation-cmds rm5.png>)
+![image](https://github.com/chibyke01/DevOps_Projects/assets/103823637/b5d2050e-14f7-4eca-af38-2938f0db56c8)
 
 * **head** command - prints the first lines of one or more files (or piped data) to standard output. By default, it shows the first 10 lines
 * **tail** command - shows you data from the end of a fil
@@ -62,10 +64,9 @@ File permissions are listed using the **ls -l** command. The -l flag lists the f
 
 * **chown** command changes user ownership of a file, directory, or link in Linux. 
 
-![Image](<File Manipulation-cmds chmod7.png>)
-
-![Image](<File Manipulation-cmds chmod8.png>)
-
+![image](https://github.com/chibyke01/DevOps_Projects/assets/103823637/35baf2e3-885a-41bb-b1cb-91d6b0dce84d)
+-----
+![image](https://github.com/chibyke01/DevOps_Projects/assets/103823637/310be4c5-8a72-4b81-8e36-1e491248d966)
 
 
 * **kill** command can be used when a process becomes unresponsive or is consuming too many resources, you may need to kill it. A root user can kill all processes. You can either add sudo before a command to run it as root, or obtain a root shell with su. Then execute the command.
@@ -96,7 +97,7 @@ Killing a process sends a termination message to the given process. There are mu
 
 			man ls
 
-![Image](<File Manipulation-cmds uname9.png>)
+![image](https://github.com/chibyke01/DevOps_Projects/assets/103823637/3b3e90bb-5017-43d7-b74c-d5c114502a9a)
 
 
 * **useradd** command is used to create a new user account, only root or users with sudo privileges can use the useradd command to create new user accounts.
