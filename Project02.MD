@@ -22,7 +22,6 @@ To get started with this project I installed the Git, as this comes with a termi
 ![image](https://github.com/chibyke01/DevOps_Projects/assets/103823637/eea24879-113f-4591-b56e-46f723a096da)
 
 
-
 **3.** Created files with contents inside, used the commit cmd to move the file and its contents to the local respository. 
 
         touch index.txt
