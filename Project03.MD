@@ -77,16 +77,18 @@ After the steps above to confirm the installation login to confirm installation 
 `mysql -p`
 
 `mysql> exit`
+
 ![Alt text](image-5.png)
 
 
 # Installing PHP
-To begin the installing on same terminal run the below: 
+To begin the installation on same terminal run the below: 
 `sudo apt install php libapache2-mod-php php-mysql`
 
-After the installing to confirm the verison of php installed run the cmd.
+After the installation to confirm the verison of php installed run the cmd.
 
 `php -v`
+
 ![Alt text](image-6.png)
 
 At this point the **LAMP stack installation** is complete and fully operational to Lunch a web page as the below has been installed successfully.
