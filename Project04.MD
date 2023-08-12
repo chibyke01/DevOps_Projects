@@ -131,7 +131,24 @@ Type the below on a browser to confirm our webpage.
 
 ![image](https://github.com/chibyke01/DevOps_Projects/assets/103823637/4ffc9372-a38c-4a50-975c-c9ea78b3e24e)
 
+## Testing PHP with NGINX
+However at this point the LEMP has been set up, but we need to validate that the NGINX can correctly hand .php file to PHP processor.
 
+Create a file in the document root
+Open the file in vi editor and paste the **info**
+```
+cd /var/www/projectLEMP
+
+touch info.php
+
+vi /var/www/projectLEMP/info.php
+
+<?php
+phpinfo();
+```
+Type the below address on the web browser
+
+`http://<Public.IP/info.php`
 
 
 
