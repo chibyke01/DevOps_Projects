@@ -123,10 +123,13 @@ touch index.html
 
 vi index.html
 ```
-Open the public add on the web browser to confirm our webpage.
+![image](https://github.com/chibyke01/DevOps_Projects/assets/103823637/98b1c2fa-f048-4879-9fed-f23b34e16bdf)
+
+Type the below on a browser to confirm our webpage.
 
 `http://<Public-IP-Address>:80`
 
+![image](https://github.com/chibyke01/DevOps_Projects/assets/103823637/4ffc9372-a38c-4a50-975c-c9ea78b3e24e)
 
 
 
