@@ -110,6 +110,7 @@ Check for errors
 
 `sudo nginx -t`
 
+![image](https://github.com/chibyke01/DevOps_Projects/assets/103823637/46f9ac55-1bc2-425c-8c5e-fc947455de2b)
 
 
 
