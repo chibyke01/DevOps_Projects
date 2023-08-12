@@ -150,6 +150,7 @@ Type the below address on the web browser
 
 `http://<Public.IP/info.php`
 
+![image](https://github.com/chibyke01/DevOps_Projects/assets/103823637/54d71cb9-9ec7-48d5-9e60-ba7469d09c7e)
 
 
 
