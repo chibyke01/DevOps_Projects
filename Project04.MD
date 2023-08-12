@@ -113,7 +113,19 @@ Check for errors
 ![image](https://github.com/chibyke01/DevOps_Projects/assets/103823637/46f9ac55-1bc2-425c-8c5e-fc947455de2b)
 
 
+Disable the default NIGINX that is configured to host 80, reload NIGINX to save the changes and add content to the .html file using touch and vi editor.
+```
+sudo unlink /etc/nginx/sites-enabled/default
 
+cd /var/www/projectLEMP
+
+touch index.html
+
+vi index.html
+```
+Open the public add on the web browser to confirm our webpage.
+
+`http://<Public-IP-Address>:80`
 
 
 
