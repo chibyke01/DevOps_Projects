@@ -193,6 +193,8 @@ Confirm that it was saved by running the below cmd and exit MySQL
 
 `mysql> exit`
 
+![image](https://github.com/chibyke01/DevOps_Projects/assets/103823637/31a17d60-d4c4-4c66-846d-64ea0a1c7286)
+
 Create a php in the root directory using any editor of choice
 
 `vi /var/www/projectLEMP/todo_list.php`
@@ -222,7 +224,7 @@ Type the below in the webpage
 
 `http://<Public_domain_or_IP>/todo_list.php`
 
-
+![image](https://github.com/chibyke01/DevOps_Projects/assets/103823637/331db564-55ad-4cc1-a49d-feac8b4fd756)
 
 
 
