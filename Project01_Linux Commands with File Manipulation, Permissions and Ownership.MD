@@ -1,5 +1,4 @@
 # Linux Commands with File Manipulation, Permissions and Ownership.
-<img width="697" alt="infor php output" src="https://github.com/chibyke01/DevOps_Projects/assets/103823637/b7b7113e-31f2-469d-8ec3-9f92bc0691a6">
 
 Linux is a family of open-source Unix-like operating systems based on the Linux kernel, an operating system kernel first released on September 17, 1991, by Linus Torvalds. Linux is typically packaged as a Linux distribution, which includes the kernel and supporting system software and libraries, many of which are provided by the GNU Project.
 
