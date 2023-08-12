@@ -153,4 +153,83 @@ Type the below address on the web browser
 ![image](https://github.com/chibyke01/DevOps_Projects/assets/103823637/54d71cb9-9ec7-48d5-9e60-ba7469d09c7e)
 
 
+## Retrieving data from MySQL database with PHP
+
+Connect to MySQL
+
+`sudo mysql`
+
+Create a database and a user
+
+```
+mysql> CREATE DATABASE `example_database`;
+
+mysql>  CREATE USER 'example_user'@'%' IDENTIFIED WITH mysql_native_password BY 'PassWord.1';
+```
+
+Give the user permission over the database and exit
+
+```
+mysql> GRANT ALL ON example_database.* TO 'example_user'@'%';
+
+mysql> exit
+```
+
+Check if the user has the given permission
+```
+mysql -u example_user -p
+
+mysql> SHOW DATABASES;
+```
+Create a table nameed Todo_list and insert some rows of contents
+```
+CREATE TABLE example_database.todo_list (item_id INT AUTO_INCREMENT,content VARCHAR(255),PRIMARY KEY(item_id));
+
+mysql> INSERT INTO example_database.todo_list (content) VALUES ("My first important item");
+```
+Confirm that it was saved by running the below cmd and exit MySQL
+
+`mysql>  SELECT * FROM example_database.todo_list;`
+
+`mysql> exit`
+
+Create a php in the root directory using any editor of choice
+
+`vi /var/www/projectLEMP/todo_list.php`
+
+Paste the below script, save and exit **(:wq + enter)**
+```
+<?php
+$user = "example_user";
+$password = "PassWord.1";
+$database = "example_database";
+$table = "todo_list";
+
+try {
+  $db = new PDO("mysql:host=localhost;dbname=$database", $user, $password);
+  echo "<h2>TODO</h2><ol>";
+  foreach($db->query("SELECT content FROM $table") as $row) {
+    echo "<li>" . $row['content'] . "</li>";
+  }
+  echo "</ol>";
+} catch (PDOException $e) {
+    print "Error!: " . $e->getMessage() . "<br/>";
+    die();
+}
+```
+
+Type the below in the webpage
+
+`http://<Public_domain_or_IP>/todo_list.php`
+
+
+
+
+
+
+
+
+
+
+
 
