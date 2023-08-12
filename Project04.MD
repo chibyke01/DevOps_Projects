@@ -22,7 +22,7 @@ Updating my server package and installing NGINX
 To verify NGINX installed correctly and open port:80 as default
  
 `sudo systemctl status nginx`
-![Image](image-12.png)
+![image](https://github.com/chibyke01/DevOps_Projects/assets/103823637/cb3957a8-cf79-42d4-9980-01d7b3a04acc)
 
 How to access it locally from ubuntu
 
@@ -34,7 +34,7 @@ How to access it locally from ubuntu
 On the web browser I used the below to view the NGINX page and to confirm set up.
 
 `http://100.24.5.4:80`
-![Alt text](image-13.png)
+![image](https://github.com/chibyke01/DevOps_Projects/assets/103823637/44bb4aa0-c03e-4df5-b920-2d65ddc82315)
 
 
 
