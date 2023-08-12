@@ -2,7 +2,7 @@
 
 This project outlines the implementation process of a LAMP (Linux, Apache, MySQL, PHP) Stack on Linux-based server. It provides step-by-step instructions with screenshots from my Lab for installing and configuring each component of the stack, along with basic security considerations.
 
-**LAMP stack** is an open-source software bundle used to build websites and web applications. LAMP is an acronym that consist of these four main components/operating system:
+**LAMP stack** is an open-source software bundle used to build websites and web applications. LAMP is an acronym that consist of these four main open source technologies:
 
 * **L - Linux**: The operating system that provides the foundation for the stack.
 * **A - Apache**: A web server(HTTP Server) software that serves web content to users.
