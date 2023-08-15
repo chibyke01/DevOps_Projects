@@ -25,7 +25,8 @@ Created an instance using my AWS EC2
 Connect to EC2 instance via ssh using my Terminal:
 * cd Downloads (where my .pem file is located)
 * ssh -i <private-key-name>.pem ubuntu@<Public-IP-address>
-![Alt text](image.png)
+
+![image](https://github.com/chibyke01/DevOps_Projects/assets/103823637/b3430c4f-3165-482c-959f-27f356f83217)
 
 # Installing Apache And Updating the Firewall
 update a list of packages in package manager and run apache package installation.
@@ -37,10 +38,11 @@ update a list of packages in package manager and run apache package installation
 To confirm service was running successfuly run the below cmd and if it is Green and running this confirms that the installation was done correctly.
 `sudo systemctl status apache2`
 
-![Alt text](image-2.png)
+![image](https://github.com/chibyke01/DevOps_Projects/assets/103823637/881227f7-4034-440a-9f59-011fa5ff7808)
 
 Open Port 80 on my EC2 server as this is the default port a web browser use to access web pages.
-![Alt text](image-3.png)
+
+![image](https://github.com/chibyke01/DevOps_Projects/assets/103823637/20229c83-b4df-4784-ad9f-1f5e8e41afea)
 
 Run the curl cmd: as this is used to request Apache HTTP Server on open port 80. 
 `curl http://localhost:80`
@@ -52,10 +54,11 @@ With this the Apache installation is complete and for confirmation, run the belo
 
 N/B - You can also get the Public IP using running the below cmd on your terminal:
 `curl -s http://169.254.169.254/latest/meta-data/public-ipv4`
-![Alt text](image-11.png)
+
+![image](https://github.com/chibyke01/DevOps_Projects/assets/103823637/5e607dff-c73e-49ce-80d1-47772fcf30c6)
 
 On your web browser type **http://<Public-IP-Address>:80** if the below default page output is what you get then it confirms that the web server is installed correctly and can be accessed through port 80.
-![Alt text](image-4.png)
+![image](https://github.com/chibyke01/DevOps_Projects/assets/103823637/7afef9d4-9a95-4387-83ed-08e7d99901cf)
 
 ## Installing MySQL Database
 To start the installion of mysql-server run the below and when prompted confirm installation by typing Y:
@@ -78,7 +81,7 @@ After the steps above to confirm the installation login to confirm installation 
 
 `mysql> exit`
 
-![Alt text](image-5.png)
+![image](https://github.com/chibyke01/DevOps_Projects/assets/103823637/0533ae8b-8fc4-4d80-b2de-8cd232f71888)
 
 
 # Installing PHP
@@ -89,7 +92,7 @@ After the installation to confirm the verison of php installed run the cmd.
 
 `php -v`
 
-![Alt text](image-6.png)
+![image](https://github.com/chibyke01/DevOps_Projects/assets/103823637/5f7cb943-6678-43a8-ace1-713d199d0811)
 
 At this point the **LAMP stack installation** is complete and fully operational to Lunch a web page as the below has been installed successfully.
 * **Linux**
@@ -172,15 +175,16 @@ Reload Apache for changes to take effect
 The website is now active but the web root is empty, to test if the virtual host works well we will create an index.html file in the location using the cmd.
 
 `sudo echo 'Hello LAMP from hostname' $(curl -s http://169.254.169.254/latest/meta-data/public-hostname) 'with public IP' $(curl -s http://169.254.169.254/latest/meta-data/public-ipv4) > /var/www/projectlamp/index.html`
-![Alt text](image-8.png)
+
+![image](https://github.com/chibyke01/DevOps_Projects/assets/103823637/161bd662-62b3-4d23-899b-09ba886f8777)
 
 * **Lets test the webpage by using the URL**
 
 `http://<Public-IP-Address>:80`
 
-![Alt text](image-9.png)
+![image](https://github.com/chibyke01/DevOps_Projects/assets/103823637/a050f1de-50cd-470c-862f-5f614a2cb2dd)
 ---
-![Alt text](image-10.png)
+![image](https://github.com/chibyke01/DevOps_Projects/assets/103823637/20f9b28d-04cd-402f-8507-5bed369d6349)
 
 Did a test by added some words to the Hello LAMP and it also updated.
 
