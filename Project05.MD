@@ -54,13 +54,13 @@ running the above will open a vscode terminal and you can either paste or type y
 `./chibuike_script.sh`
 
 **Using Vscode**
-![Alt text](image.png)
+![image](https://github.com/chibyke01/DevOps_Projects/assets/103823637/bb541225-dbe9-4851-adff-b6a9717d66c0)
 
 **Using the Vi editor**
-![Alt text](image-3.png)
+![image](https://github.com/chibyke01/DevOps_Projects/assets/103823637/52c5ec89-5f31-4a7e-bf9b-0901de4817e5)
 
 **Using the bash terminal**
-![Alt text](image-1.png)
+![image](https://github.com/chibyke01/DevOps_Projects/assets/103823637/a07ba0eb-1b82-48e6-ad5a-8c515f2f5160)
 
 Let us run another script this time we need to create a directory and a file in the directory to save the script.
 ```
@@ -90,7 +90,7 @@ On the terminal we need to allow permission for the file but in some cases you c
 
 `./user-input.sh`
 
-![Alt text](image-4.png)
+![image](https://github.com/chibyke01/DevOps_Projects/assets/103823637/325a7f15-46d8-4435-8064-971b6daeddce)
 
 ## Directory Manipulation and Navigation
 In this project the script will create a directory cd the directory and create two file in it, list the files created, move back one level up, remove the directory that was created and its contents and will list the files in the directory, but before we proceed we need to create a .sh file in the bash terminal, open the fil eusing the vi editor and paste the script before running it.
@@ -142,7 +142,7 @@ ls
 
 `./navigating-linux-filesystem.sh`
 
-![Alt text](image-5.png)
+![image](https://github.com/chibyke01/DevOps_Projects/assets/103823637/def5c176-b39e-42ad-ba17-893e3e62e274)
 
 ## File Operations and Sorting
 In this project the script creates three file(file1.txt, file2.txt and file3.txt) displays the files in their current order, sorts them alphabetically, saves the sorted files in sorted_files.txt, displays the sorted_files_sorted_alphabetically.txt and displays the content of the final sorted file.
@@ -191,7 +191,7 @@ cat sorted_files_sorted_alphabetically.txt
 
 `./sorting.sh`
 
-![Alt text](image-6.png)
+![image](https://github.com/chibyke01/DevOps_Projects/assets/103823637/d9d09813-1738-419e-9f44-211783b7aa56)
 
 ## Working with Numbers and Calculations
 THis script defines two variables num1 and num2 with numeric values, performs basic arithmetic operations and displays the results, it also raised the num1 to a power of 2 and calculate the square root of num2 and displays the results.
@@ -234,7 +234,7 @@ echo "Square root of number 2: $square_root"
 
 `./calculations.sh`
 
-![Alt text](image-7.png)
+![image](https://github.com/chibyke01/DevOps_Projects/assets/103823637/0d6c26f6-4e15-4ff2-9cf3-9af830678450)
 
 ## File Backup and Timestamping
 This script defines the source directory and back up directory paths, it then creates a timestamp using the current date and time, and create a backup directory with the timestanp and append it to its name, the script then copies all the files from the source directory to the backup directory using the cp command with -r option for recursive copying. after the operation it displays a message indicating the completion of the backup process and shows the path pf the backup directory with time stamp. This script will also run on the vscode.
