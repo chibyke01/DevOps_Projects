@@ -268,8 +268,8 @@ echo "Backup completed. Files copied to: $backup_dir_with_timestamp"
 
 `./backup.sh`
 
-![Alt text](image-8.png)
-![Alt text](image-10.png)
+![image](https://github.com/chibyke01/DevOps_Projects/assets/103823637/defde26a-0482-4364-bb27-a9ba67380183)
+![image](https://github.com/chibyke01/DevOps_Projects/assets/103823637/66ed9e8b-63d2-4f67-8efd-1c9c64dae54e)
 
 **N/B** You can also confirm the number on the  backup folder is same with the backup number on the bash terminal **backup_20230817181905
 ** 
@@ -283,7 +283,7 @@ On the vscode terminal run the below cmd.
 
 `./backup.sh`
 
-![Alt text](image-9.png)
+![image](https://github.com/chibyke01/DevOps_Projects/assets/103823637/2a319ca4-574c-4ce0-885e-83473a46e024)
 
 **_Thank You_**
 
