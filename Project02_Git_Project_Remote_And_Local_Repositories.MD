@@ -27,7 +27,7 @@ To get started with this project I installed the Git, as this comes with a termi
         touch index.txt
         echo "contents in the file" > "filename.txt"
         git add .
-        git commit -m "treat and work to prevent gastrointenstina"
+        git commit -m "treat and work to prevent gastrointenstina."
 
 ![image](https://github.com/chibyke01/DevOps_Projects/assets/103823637/c7ae11b6-2f0f-41e1-b01f-2396dd946ba4)
 
