@@ -17,7 +17,7 @@ LAMP stacks is used to create, host, and maintain web content. It is a popular s
 * Linux distribution (e.g., Ubuntu Server)
 * Root or sudo access to the server.
 
-To start this project I inatall an OpenSSH on my windows machine using the below link:
+To start this project I inatalled an OpenSSH on my windows machine using the below link:
 [OpenSSH for Windows](https://learn.microsoft.com/en-us/windows-server/administration/openssh/openssh_install_firstuse?tabs=powershell#install-openssh-for-windows)
 
 Created an instance using my AWS EC2
