@@ -49,7 +49,7 @@ However to call up the vscode from the bash terminal I used **code .** but befor
 
 `code .`
 
-running the above will open a vscode terminal and you can either paste or type your acript on the vscode page and save, after which run the below code on the vscode terminal
+Running the above will open a vscode terminal and you can either paste or type your acript on the vscode page and save, after which run the below code on the vscode terminal
 
 `./chibuike_script.sh`
 
