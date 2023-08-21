@@ -7,7 +7,7 @@ Client server refers to an architecture in which two or more computers are conne
 * Two(2) AWS EC2 instance(Ubuntu)
 * Windows Powershell 
 
-In other to implement this project, I started by creating two(2) EC2 instances in AWS and named each of the instances as seen below and connected it to the windows powershell terminal remotely:
+In other to implement this project, I will start by creating two(2) EC2 instances in AWS and named each of the instances as seen below and connected it to the windows powershell terminal remotely:
 ```
 Server 1 name - MySQL Server
 Server 2 name - MySQL Client 
