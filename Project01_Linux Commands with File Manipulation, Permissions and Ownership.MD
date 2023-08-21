@@ -16,7 +16,7 @@ After installaton of the Linux machine on the system, you will update to the lat
 
 		sudo apt update
 
->sudo apt upgrade
+		sudo apt upgrade
 
 ![image](https://github.com/chibyke01/DevOps_Projects/assets/103823637/c3877caa-c5da-435e-bd69-89b998b47408)
 -----
