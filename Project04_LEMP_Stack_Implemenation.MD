@@ -9,7 +9,7 @@ The LEMP stack is a combination of four open-source technologies that are used i
 The LEMP stack works by using Nginx as the web server, which listens for HTTP requests and forwards them to the appropriate PHP script. The PHP script generates a response, which is then sent back to the user via Nginx.
 MySQL is used to store and manage the website’s data. PHP communicates with MySQL to retrieve and store data as needed.
 
-First I ssh into your EC2 instance using git bash terminal and opened post:80 as my default web browser access.
+First I ssh into my EC2 instance using git bash terminal and opened post:80 as my default web browser access.
 
 ## Installing NGINX
 Updating my server package and installing NGINX
