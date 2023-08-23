@@ -17,10 +17,10 @@ Create two(2) EC2 VM with Ubuntu server 20.04 LTS and named them ecs-nginx-serve
 
 **Apache2 Webserver Configuration**
 
-1. On the apache2 ec2 instance, created an inbound rule to allow traffic/listen to port 8000.
+On the apache2 ec2 instance, created an inbound rule to allow traffic/listen to port 8000.
 ![Alt text](image-1.png)
 
-2. Updated the remotely connected SSH EC2 instance and installed apache2 web sever on the terminal.
+Update the remotely connected SSH EC2 instance and installed apache2 web sever on the terminal.
 ```
 sudo apt update 
 sudo apt upgrade 
@@ -33,7 +33,7 @@ sudo apt update -y &&  sudo apt install apache2 -y
 
 ![Alt text](image-3.png)
 
-3. Confirgure the Apache2 to listen to port 8000 as allowed on my instance I need to edit the port.conf file, the 000-default.conf file.
+Confirgure the Apache2 to listen to port 8000 as allowed on my instance I need to edit the **port.conf** file, the **000-default.conf** file.
 
 * For the port.conf file, added Listen 8000, used :wq! to save and exit vi editor.
 
@@ -49,7 +49,7 @@ sudo apt update -y &&  sudo apt install apache2 -y
 ![Alt text](image-6.png)
 ![Alt text](image-7.png)
 
-4. Customised the web page by editing the default index.html file of Apache webserver, using **:1,$d** - to highlight and delete all content of the default webserver paste a customised web page code, save and exit **:wq!**.
+Customised the web page by editing the default index.html file of Apache webserver, using **:1,$d** - to highlight and delete all content of the default webserver paste a customised web page code, save and exit **:wq!**.
 
 `vi /var/www/index.html`
 ```
@@ -78,11 +78,11 @@ At this point we have successufully completed the apache2 webserver set up, to t
 
 **Nginx Load Balancer Configuration**
 
-**1.** Set up http inbound rule and open port 6000 on the AWS instance.
+Set up http inbound rule and open port 6000 on the AWS instance.
 
 ![Alt text](image-10.png)
 
-**2.** SSH remotely to EC2 instance, update, upgrade and install the nginx webserver.
+SSH remotely to EC2 instance, update, upgrade and install the nginx webserver.
 ```
 sudo apt install update 
 sudo apt install upgrade 
@@ -92,7 +92,7 @@ sudo apt update -y && sudo apt install nginx -y
 
 `sudo systemctl status nginx`
 
-3. Open nginx configuration file.
+Open nginx configuration file.
 
 `sudo vi /etc/nginx/conf.d/loadbalancer.conf`
 
@@ -130,7 +130,7 @@ sudo apt update -y && sudo apt install nginx -y
 
 `sudo systemctl restart nginx`
 
-4. At this point we are fine with the setup/configuration for the nginx server to act as a Load balancer, however to prove the success of this configuration I will use the nginx public ip to make a request to the apache2 webserver, the result/output will be the configuration on set up on my apache2 server.
+At this point we are fine with the setup/configuration for the nginx server to act as a Load balancer, however to prove the success of this configuration I will use the nginx public ip to make a request to the apache2 webserver, the result/output will be the configuration on set up on my apache2 server.
  
 The request will done using the publis IP of the apache2 and nginx web server to see if it will give us same result.
 
