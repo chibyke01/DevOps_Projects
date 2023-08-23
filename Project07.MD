@@ -3,7 +3,7 @@
 ## Introduction to Load Balancer
 In this project will learn how to distribute traffic efficiently accross mutiple servers, optimise performance and ensure high availability for a web application
 
-![Alt text](image.png)
+![image](https://github.com/chibyke01/DevOps_Projects/assets/103823637/4b8d279a-e975-4a61-ba3b-e6cc3c2128de)
          **Load Balancer System Diagram**
 
 The above diagram gives a pictorial definition of a load balancer, which can also be defined as a Device or application that distributes network and/or application traffic accross multiple servers or applications. 
@@ -18,7 +18,7 @@ Create two(2) EC2 VM with Ubuntu server 20.04 LTS and named them ecs-nginx-serve
 **Apache2 Webserver Configuration**
 
 1. On the apache2 ec2 instance, created an inbound rule to allow traffic/listen to port 8000.
-![Alt text](image-1.png)
+![image](https://github.com/chibyke01/DevOps_Projects/assets/103823637/e30958db-7b2a-4ce2-b439-e7f258d76328)
 
 2. Update the remotely connected SSH EC2 instance and installed apache2 web sever on the terminal.
 ```
@@ -26,12 +26,12 @@ sudo apt update
 sudo apt upgrade 
 sudo apt update -y &&  sudo apt install apache2 -y
 ```
-![Alt text](image-2.png)
+![image](https://github.com/chibyke01/DevOps_Projects/assets/103823637/b31c5e17-23fc-47a4-a4b3-088d6c50fe86)
 
 * Confirmed installation was successfull by checking the status.
 `sudo systemctl status apache2`
 
-![Alt text](image-3.png)
+![image](https://github.com/chibyke01/DevOps_Projects/assets/103823637/70080f48-876f-4eeb-9d9f-81afd948b261)
 
 3. Confirgure the Apache2 to listen to port 8000 as allowed on my instance I need to edit the **port.conf** file, the **000-default.conf** file.
 
@@ -39,15 +39,15 @@ sudo apt update -y &&  sudo apt install apache2 -y
 
 `sudo vi /etc/apache2/ports.conf`
 
-![Alt text](image-5.png)
-![Alt text](image-4.png)
+![image](https://github.com/chibyke01/DevOps_Projects/assets/103823637/6d1dd8bc-9834-438e-ae87-18d78c8069b5)
+![image](https://github.com/chibyke01/DevOps_Projects/assets/103823637/95fe42f3-ce28-42e8-95ef-fae1fe1bd092)
 
 * For 000-default.conf file changed the default Virtual Host to 8000.
 
 `sudo vi /etc/apache2/sites-available/000-default.conf`
 
-![Alt text](image-6.png)
-![Alt text](image-7.png)
+![image](https://github.com/chibyke01/DevOps_Projects/assets/103823637/c5e6598b-db49-4c5d-b71e-b3b9d8ebb823)
+![image](https://github.com/chibyke01/DevOps_Projects/assets/103823637/48a723f9-0347-4035-945a-85cb2f830745)
 
 4. Customise the web page by editing the default index.html file of Apache webserver, using **:1,$d** - to highlight and delete all content of the default webserver paste a customised web page code, save and exit **:wq!**.
 
@@ -72,7 +72,7 @@ At this point we have successufully completed the apache2 webserver set up, to t
 
 `54.225.11.151:8000`
 
-![Alt text](image-8.png)
+![image](https://github.com/chibyke01/DevOps_Projects/assets/103823637/136517b6-2a3c-42d9-8941-915e73eef83a)
 
 -----
 
@@ -80,7 +80,7 @@ At this point we have successufully completed the apache2 webserver set up, to t
 
 1. Set up http inbound rule and open port 6000 on the AWS instance.
 
-![Alt text](image-10.png)
+![image](https://github.com/chibyke01/DevOps_Projects/assets/103823637/94f85cb4-4d18-4569-bd6f-538551266b0e)
 
 2. SSH remotely to EC2 instance, update, upgrade and install the nginx webserver.
 ```
@@ -124,7 +124,7 @@ sudo apt update -y && sudo apt install nginx -y
 
 `sudo nginx -t`
 
-![Alt text](image-12.png)
+![image](https://github.com/chibyke01/DevOps_Projects/assets/103823637/1a9e5399-ff71-4172-beb9-6566baae2da7)
 
 * Restart nginx server to allow for the configurations to take effect.
 
@@ -135,13 +135,13 @@ At this point we are fine with the setup/configuration for the nginx server to a
 The request will done using the publis IP of the apache2 and nginx web server to see if it will give us same result.
 
 * Public IP Nginx server (Load Balancer)
-![Alt text](image-13.png)
+![image](https://github.com/chibyke01/DevOps_Projects/assets/103823637/70924aad-fbb2-4433-b2f4-6cb18de481b6)
 
 * Public IP Apache2
-![Alt text](image-14.png)
+![image](https://github.com/chibyke01/DevOps_Projects/assets/103823637/c4b2b8cc-869c-4215-8705-ae7d6e189259)
 
 * Web page request using nginx and apache2 public IP.
-![Alt text](image-15.png)
+![image](https://github.com/chibyke01/DevOps_Projects/assets/103823637/373a9c97-8634-4819-b9a6-5f343e97ea3d)
 
 
 
