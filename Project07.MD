@@ -76,13 +76,13 @@ At this point we have successufully completed the apache2 webserver set up, to t
 
 -----
 
-**Nginx Webserver/Load Balancer Configuration**
+**Nginx Load Balancer Configuration**
 
-1. Set up http inbound rule and open port 6000 on the AWS instance.
+**1.** Set up http inbound rule and open port 6000 on the AWS instance.
 
 ![Alt text](image-10.png)
 
-2. SSH remotely to EC2 instance, update, upgrade and install the nginx webserver.
+**2.** SSH remotely to EC2 instance, update, upgrade and install the nginx webserver.
 ```
 sudo apt install update 
 sudo apt install upgrade 
