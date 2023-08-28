@@ -14,8 +14,8 @@ In this project we are going to use scipt to install, update and configure webse
 
 To start the project we would initiate or spin up **two(2)** EC2 instances using **Ubuntu 22.04** and **SSH** both instances to any of our choice terminals, in this I will be using two different terminal Git Bash and PowerShell.
 
-![Alt text](image-2.png)
-![Alt text](image.png)
+![image](https://github.com/chibyke01/DevOps_Projects/assets/103823637/84e9e7c1-95f3-40eb-bb4f-1b6562e2e3a8)
+![image](https://github.com/chibyke01/DevOps_Projects/assets/103823637/4f270c26-614a-4da4-a440-748ce4db66b1)
 
 Connected the both instances and run the update and upgrade using the below cmds:
 ```
@@ -24,7 +24,7 @@ sudo apt upgrade
 ```
 Open port 8000 on the inbound security rule.
 
-![Alt text](image-3.png)
+![image](https://github.com/chibyke01/DevOps_Projects/assets/103823637/b8ade9f0-a879-4930-b908-1f6253c9c6c6)
 
 ## Automate the Deployment of Apache2 Webserver using Shell Scripting
 
@@ -87,8 +87,8 @@ else
     echo "Apache installation or configuration failed."
 fi
 ```
-![Alt text](image-4.png)
-![Alt text](image-5.png)
+![image](https://github.com/chibyke01/DevOps_Projects/assets/103823637/888d8067-506b-4a0a-b202-c988bcfe615b)
+![image](https://github.com/chibyke01/DevOps_Projects/assets/103823637/fca75e03-63ec-4d2d-a852-6488d90308e4)
 
 Change permission to allow for executation of the script in the install.sh file.
 
@@ -100,16 +100,16 @@ Run the script after exiting the vi editor using the below cmd.
         or 
 sudo ./install.sh PUBLIC_IP
 ```
-![Alt text](image-6.png)
+![image](https://github.com/chibyke01/DevOps_Projects/assets/103823637/43c80a40-8a8a-4a13-a85d-323b982c7d36)
 
 At this point we are done with the Apache2 webserver configuration, we can now use the Public IP of the Apache2 webserver to confirm
 
-![Alt text](image-8.png)
+![image](https://github.com/chibyke01/DevOps_Projects/assets/103823637/a06b91ea-ed7c-46c1-be65-08035e72baa1)
 
 ## Automate the Deployment of Nginx Webserver as a Load Balancer using Shell Scripting.
 On the EC2 instance create open HTTP port to allow for traffice anywhere in the inbound rule.
 
-![Alt text](image-10.png)
+![image](https://github.com/chibyke01/DevOps_Projects/assets/103823637/c8dc02c5-9a62-4d5f-b150-9c95f516c5e6)
 
 I Update and upgrade the terminal, created a **.sh** file to store my script that will automate the process using the below cmd.
 
@@ -166,7 +166,7 @@ if [[ $? -eq 0 ]]; then
     sudo systemctl restart nginx
 fi
 ```
-![Alt text](image-9.png)
+![image](https://github.com/chibyke01/DevOps_Projects/assets/103823637/5cd518a6-69e4-4401-87e5-a306a16231a1)
 
 Change permission for the file/script to be executable.
 
@@ -184,14 +184,14 @@ To confirm the successful configuration/automation using the script we need to t
 
 Below screenhot shows the Public IPs of the Apache2 websever and the Nginx webserver.
 * Apache2
-![Alt text](image-11.png)
+![image](https://github.com/chibyke01/DevOps_Projects/assets/103823637/f4919017-821d-419a-9917-ca4725236d85)
 
 * Nginx
-![Alt text](image-12.png)
+![image](https://github.com/chibyke01/DevOps_Projects/assets/103823637/446fb69b-1e9c-443c-bc6f-6b4fc40e1534)
 
 The screenshot below shows the two Public IP address of Apache2 webserver and Nginx webserver displaying same web output as it confirms a successfull configuration.
 
-![Alt text](image-13.png)
+![image](https://github.com/chibyke01/DevOps_Projects/assets/103823637/120e22b6-2835-460a-ab03-49e5b9cf174a)
 
 
 # **_Thank you_**
