@@ -37,7 +37,7 @@ After installaton of the Linux machine on the system, you will update to the lat
 
 * **cp** - copies files/directories to another content
 * **mv** - can be used to either move or remain file/directories 
-* **mkdir** - its used to creat a directory
+* **mkdir** - its used to create a directory
 * **rmdir** - used to remove directory, adding the **-p** can be used to remove or delete directory containing a file
 * **rm** - remove file/files from a directory
 * **touch** - Creates a file
@@ -45,8 +45,10 @@ After installaton of the Linux machine on the system, you will update to the lat
 ![image](https://github.com/chibyke01/DevOps_Projects/assets/103823637/b5d2050e-14f7-4eca-af38-2938f0db56c8)
 
 * **head** command - prints the first lines of one or more files (or piped data) to standard output. By default, it shows the first 10 lines
-* **tail** command - shows you data from the end of a fil
-* **diff** command - Is used to compare directories in Linux To use the diff command, you will have to follow a simple syntax: **diff -qr deploy1.yml deploy2.yml**
+* **tail** command - shows you data from the end of a file
+* **diff** command - Is used to compare directories in Linux To use the diff command, you will have to follow a simple syntax: 
+
+`**diff -qr deploy1.yml deploy2.yml**`
 
 ## File Permission and Ownership
 
@@ -80,15 +82,16 @@ Killing a process sends a termination message to the given process. There are mu
 
 * **ping** command is a simple utility used to check whether a network is available and if a host is reachable.
 
-	   		ping google.com
+`ping google.com`
 
 
 * **Wget** is a command-line utility for downloading files from the web. With Wget, you can download files using HTTP, HTTPS, and FTP protocols. Wget provides a number of options allowing you to download multiple files, resume downloads, limit the bandwidth, recursive downloads, download in the background, mirror a website, and much more.
+```
+wget https://cdn.kernel.org/pub/linux/kernel/v4.x/linux-4.17.2.tar.xz
+```
 
-		wget https://cdn.kernel.org/pub/linux/kernel/v4.x/linux-4.17.2.tar.xz
 
-
-* **uname** command used to print detail information about linux system
+* **uname** command is used to print detail information about linux system
 
 		  uname -a
 
