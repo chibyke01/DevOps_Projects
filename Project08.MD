@@ -1,7 +1,38 @@
+# AUTOMATING LOAD BALANCER CONFIGURATION WITH SHELL SCRIPTING USING NGINX
+As a DevOps engineer, scripting plays a crucial role in automating various processes within development and IT operations. Some key reasons why automation through scripting is essential in the DevOps practice are as listed below:
 
+* Efficiency and Consistence
+* Rapid Deployment
+* Infrastructure as Code (IaC)
+* Scalability
+* Reduced Risk
+* Traceability and Auditing
+* Time Savings
+* Adaptability
 
+In this project we are going to use scipt to install, update and configure webservers(Apache2 and Nginx), this script will also automate the confirguration of using Nginx webserver as a Load balancer.
 
-script to automate the Apache2 server
+To start the project we would initiate or spin up **two(2)** EC2 instances using **Ubuntu 22.04** and **SSH** both instances to any of our choice terminals, in this I will be using two different terminal Git Bash and PowerShell.
+
+![Alt text](image-2.png)
+![Alt text](image.png)
+
+Connected the both instances and run the update and upgrade using the below cmds:
+```
+sudo apt update 
+sudo apt upgrade
+```
+Open port 8000 on the inbound security rule.
+
+![Alt text](image-3.png)
+
+## Automate the Deployment of Apache2 Webserver using Shell Scripting
+
+Create and open a file to paste script, and use :wq! to exit the vi editor. 
+
+`sudo vi install.sh`
+
+Paste the below script in the vi editor to configure the Apache2 server and save and exit using **:wq!**
 
 ```
 #!/bin/bash
@@ -56,8 +87,35 @@ else
     echo "Apache installation or configuration failed."
 fi
 ```
+![Alt text](image-4.png)
+![Alt text](image-5.png)
 
-Script to automate Niginx as a load balancer and also a webserver
+Change permission to allow for executation of the script in the install.sh file.
+
+`sudo chmod +x install.sh`
+
+Run the script after exiting the vi editor using the below cmd.
+```
+./install.sh PUBLIC_IP 
+        or 
+sudo ./install.sh PUBLIC_IP
+```
+![Alt text](image-6.png)
+
+At this point we are done with the Apache2 webserver configuration, we can now use the Public IP of the Apache2 webserver to confirm
+
+![Alt text](image-8.png)
+
+## Automate the Deployment of Nginx Webserver as a Load Balancer using Shell Scripting.
+On the EC2 instance create open HTTP port to allow for traffice anywhere in the inbound rule.
+
+![Alt text](image-10.png)
+
+I Update and upgrade the terminal, created a **.sh** file to store my script that will automate the process using the below cmd.
+
+`sudo vi nginx.sh`
+
+Paste the below script in the vi editor, save and exit the editor using **:wq!**
 ```
 #!/bin/bash
 
@@ -108,3 +166,32 @@ if [[ $? -eq 0 ]]; then
     sudo systemctl restart nginx
 fi
 ```
+![Alt text](image-9.png)
+
+Change permission for the file/script to be executable.
+
+`sudo chmod +x nginx.sh`
+
+Run the scrit using the below cmd.
+```
+./nginx.sh PUBLIC_IP Webserver-1 Webserver-2
+        or 
+sudo ./ninx.sh
+```
+At this point we have successfully automated the installation of the Apache2 server, the Nginx webserver and also confingured the Nginx webserver as a Load balancer using shell scripting.
+
+To confirm the successful configuration/automation using the script we need to test both webservers as they should give same output using their different Public IP address. See below screenshot for confirmation.
+
+Below screenhot shows the Public IPs of the Apache2 websever and the Nginx webserver.
+* Apache2
+![Alt text](image-11.png)
+
+* Nginx
+![Alt text](image-12.png)
+
+The screenshot below shows the two Public IP address of Apache2 webserver and Nginx webserver displaying same web output as it confirms a successfull configuration.
+
+![Alt text](image-13.png)
+
+
+# **_Thank you_**
