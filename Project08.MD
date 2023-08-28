@@ -56,3 +56,55 @@ else
     echo "Apache installation or configuration failed."
 fi
 ```
+
+Script to automate Niginx as a load balancer and also a webserver
+```
+#!/bin/bash
+
+PUBLIC_IP="3.85.220.210"
+firstWebserver="18.212.155.16"
+secondWebserver="3.85.220.210"
+loadbalancerConfig="/etc/nginx/conf.d/loadbalancer.conf"
+
+set -x # Enable debug mode
+set -e # Exit on error
+set -o pipefail # Exit on pipeline failure
+
+# Install Nginx if not already installed
+if ! command -v nginx &> /dev/null; then
+    sudo apt update -y
+    sudo apt install nginx -y
+fi
+
+# Retrieve content from the firstWebserver
+webpage_content=$(curl -s http://18.212.155.16:8000)
+
+# Prepare the configuration content
+config_content="upstream backend_servers {
+    server 18.212.155.16:8000; # public IP and port for webserser 1
+    server 3.85.220.210; # public IP and port for webserver 2
+}
+
+server {
+    listen 80;
+    server_name 3.85.220.210; # provide your load balancer's public IP address
+
+    location / {
+        proxy_pass http://backend_servers;
+        proxy_set_header Host \$host;
+        proxy_set_header X-Real-IP \$remote_addr;
+        proxy_set_header X-Forwarded-For \$proxy_add_x_forwarded_for;
+    }
+}"
+
+# Update loadbalancer.conf with the prepared configuration content
+echo "$config_content" | sudo tee "$loadbalancerConfig" > /dev/null
+
+# Test Nginx configuration
+sudo nginx -t
+
+# Restart Nginx if configuration is valid
+if [[ $? -eq 0 ]]; then
+    sudo systemctl restart nginx
+fi
+```
