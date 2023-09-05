@@ -1,4 +1,4 @@
-# IMPLEMENTING WORDPRESS WEBSITE WITH LVM STROAGE MANAGEMENT
+# IMPLEMENTING WORDPRESS WEBSITE WITH LVM STORAGE MANAGEMENT
 In implementation it will expose me to a 3 tier architecture and configuring a storage system by working with disks, partitions and volumes using Linux.
 
 This is a two path projects that consist:
