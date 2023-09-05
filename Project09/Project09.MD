@@ -121,9 +121,104 @@ sudo systemctl daemon-reload
 ```
 ![Alt text](<Images/sudo mount -a.png>)
 
+# Installing wordpress and configuring to use MySQL Database.
+For the DB server I lunched a new EC2 inatance with Red hat Enterprise Linux 9(HVM) and followed all steps as listed above but instead of creating the apps logical volume **apps-lv** I created database logical volume **db-lv** and mount on **/db** directory instead of **/var/www/html/**.
+
+## Installing wordpress on my EC2 Webserver
+1. Update the repository using the below command
+
+`sudo yum -y update`
+
+![Alt text](<Images/Yum update webserver.png>)
+
+2. Install wget. Apache and its dependencies
+
+`sudo yum -y install wget httpd php php-mysqlnd php-fpm php-jason`
+
+3. Start Apache by using the below command.
+```
+sudo systemctl enable httpd
+sudo systemctl start httpd
+```
+![Alt text](<Images/enable start and check the status of apache.png>)
+
+4. Install PHP and its dependencies
+```
+sudo yum install https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm
+sudo yum install yum-utils http://rpms.remirepo.net/enterprise/remi-release-8.rpm
+sudo yum module list php
+sudo yum module reset php
+sudo yum module enable php:remi-7.4
+sudo yum install php php-opcache php-gd php-curl php-mysqlnd
+sudo systemctl start php-fpm
+sudo systemctl enable php-fpm
+setsebool -P httpd_execmem 1
+```
+![Alt text](<Images/Install php denpendencies.png>)
+
+5. Restart apache by running `sudo systemctl restart httpd`
+
+6. Download wordpress and copy wordpress to `var/www/html` file using the below cmds.
+```
+mkdir wordpress
+cd   wordpress
+sudo wget http://wordpress.org/latest.tar.gz
+sudo tar xzvf latest.tar.gz
+sudo rm -rf latest.tar.gz
+cp wordpress/wp-config-sample.php wordpress/wp-config.php
+cp -R wordpress /var/www/html/
+```
+7. Configure SELinux policies using the below commands.
+```
+ sudo chown -R apache:apache /var/www/html/wordpress
+ sudo chcon -t httpd_sys_rw_content_t /var/www/html/wordpress -R
+ sudo setsebool -P httpd_can_network_connect=1
+```
+
+## Installation of my MySQL on my Database (DB) Server.
+1. Update, install, enable, restart and verify my MySQL on my DB server using the below cmds.
+```
+sudo yum update
+sudo yum install mysql-server
+sudo systemctl restart mysqld
+sudo systemctl enable mysqld
+```
+![Alt text](<Images/restart and enbale mysqld.png>)
+
+2. Create a database to work with MySQL following the steps below.
+```
+sudo mysql
+CREATE DATABASE wordpress;
+CREATE USER `myuser`@`<Web-Server-Private-IP-Address>` IDENTIFIED BY 'mypass';
+GRANT ALL ON wordpress.* TO 'myuser'@'<Web-Server-Private-IP-Address>';
+FLUSH PRIVILEGES;
+SHOW DATABASES;
+exit
+```
+
+3. Configure the wordpress to remotely to the database.
+In the Inbound rule of DB server instance, I opened port 3306 to allow access to DB server using my Webserver IP.
+* Installed MySQL client on my Webserver to allow for remote connection to MySQL on the DB server using the command.
+
+`sudo yum install mysql`
+
+* Exterblished a remote connection from my webserver to MySQL on DB server using the below cmd.
+
+`mysql -h <DB server IP> -u myuser -p`
+
+![Alt text](<Images/remotely connect to my DB server.png>)
+
+4. At this point we are done with all necessary configurations but we also need to ensure that port 80 is open on my web server which I did and Used the web server public IP to access the wordpress webpage as seen below.
+
+![Alt text](<Images/Wordpress page show.png>)
+
+
+# **Thank you**
 
 
 
 
-Change permissions and configuration so Apache could use WordPress:
-Here we need to create a configuration file for wordpress in order to point client requests to the wordpress directory.
+
+
+
+
