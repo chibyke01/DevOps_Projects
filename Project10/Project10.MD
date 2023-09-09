@@ -68,3 +68,7 @@ GRANT ALL ON tooling.* TO 'webaccess'@'<Web-Server-Private-IP-Address>';
 FLUSH PRIVILEGES;
 SHOW DATABASES;
 exit
+
+=================
+journalctl -xe
+setenforce 0
