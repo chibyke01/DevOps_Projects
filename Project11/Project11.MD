@@ -7,7 +7,9 @@ The diagram below is a typical description of that explains a **Jump server/Bast
 ![Alt text](Images/Diagram.png)
 
 ## Install and Configure Jenkins and Ansible on EC2 instance
-* Install Jenkins on ec2 instance using the below commands
+**Step 1:** 
+
+1. Install Jenkins on ec2 instance using the below commands
 ```
 curl -fsSL https://pkg.jenkins.io/debian-stable/jenkins.io-2023.key | sudo tee \
     /usr/share/keyrings/jenkins-keyring.asc > /dev/null
@@ -34,4 +36,24 @@ To confirm that Jenkins was installed correctly run **sudo systemctl status jenk
 
 In other to configure Jenkins, we need to note that jenkins listens to port 8080 by default, however we use the public ip of the instance where jenkins is installed and the port it listens to, the port will be opened on the security group of the instance. The below diagram confirms a complete Jenkins set up.
 ![Alt text](<Images/Jenkins successful setup.png>)
+
+2. Configure Jenkins build job to archive my repository content each time I make changes to my Github.
+* Create a Freestyle project **Chi-test** in Jenkins and point it to my **Ansible-config-mgt** repository.
+![Alt text](<Images/Jenkins config1.png>)
+![Alt text](<Images/Jenkins config2-correct.png>)
+* Configure a webhook in Github and set the webhook to trigger ansible as the build will be triggerd on any changes made on the Ansible-confi-mgt on Github.
+![Alt text](<Images/Jenkins config3.png>)
+![Alt text](<Images/setting up webhook.png>)
+![Alt text](<Images/webhook successfully created .png>)
+* Configure a Post-build job to save all (**) files.
+![Alt text](<Images/Jenkins config4.png>)
+
+2. Test all the setup and configuration by making changes on the README.md file on Github to ensure it build successfully and jenkins saves the file(**) by running the below command:
+
+`ls /var/lib/jenkins/jobs/chi-ansible/builds/<build_number>/archive/`
+![Alt text](<Images/changes done on my github.png>)
+![Alt text](<Images/confirmed the changes from my github using code.png>)
+
+From the above setup and configuration we have the below diagram Architecture:
+![Alt text](Images/Architecture.png)
 
