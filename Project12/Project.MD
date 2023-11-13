@@ -112,4 +112,79 @@ After creating it your file structure should look like the tree structure below:
     └── templates
 ```
 
-3. Update the 
+3. Update the inventory **ansible-config-mgt/inventory/uat.yml** file with the Private IP addresses of the two UAT Web servers as show below:
+```
+[uat-webservers]
+<Web1-UAT-Server-Private-IP-Address> ansible_ssh_user='ec2-user'
+<Web2-UAT-Server-Private-IP-Address> ansible_ssh_user='ec2-user'
+```
+4. In the **main.yml** file add the below task:
+```
+---
+- name: install apache
+  become: true
+  ansible.builtin.yum:
+    name: "httpd"
+    state: present
+
+- name: install git
+  become: true
+  ansible.builtin.yum:
+    name: "git"
+    state: present
+
+- name: clone a repo
+  become: true
+  ansible.builtin.git:
+    repo: https://github.com/<your-name>/tooling.git
+    dest: /var/www/html
+    force: yes
+
+- name: copy html content to one level up
+  become: true
+  command: cp -r /var/www/html/html/ /var/www/
+
+- name: Start service httpd, if not started
+  become: true
+  ansible.builtin.service:
+    name: httpd
+    state: started
+
+- name: recursively remove /var/www/html/html/ directory
+  become: true
+  ansible.builtin.file:
+    path: /var/www/html/html
+    state: absent
+```
+The above code installs and configure Apache(https service), clone the tooling website from GitHub, ensure that teh tooling website code is deployed to **/var/www/html** on each of the UAT Webservsers.
+
+To achieve this an **ssh agent** must bs set up on both UAT Webservers to communication and access to allow installation and configuration of the **httpd service**. 
+
+## Step: 4-Referencing Webserver role
+Within the **static-assignments** folder, create a new assignment for the uat-webservers **uat-webservers.yml**, this file is where you reference the role using the below playbook:
+```
+---
+- hosts: uat-webservers
+  roles:
+     - webserver
+```
+However we need to note that the point of entry to teh ansible configuration is the **site.yml** file, therefore we are required to refer the **uat-webservers.yml** role inside **stie.yml** using the below playbook
+```
+---
+- hosts: all
+- import_playbook: ../static-assignments/common.yml
+
+- hosts: uat-webservers
+- import_playbook: ../static-assignments/uat-webservers.yml
+```
+
+## Commit and test
+At this point after all configuration and step up within the playbooks we need to commit/push all teh configuratiosn into our Github and merge to the main branch.
+
+After successful push and merge to the master branch we cd to the ansible-config-mgt folder and run our ansible playbook.
+```
+cd /home/ubuntu/ansible-config-mgt
+
+ansible-playbook -i inventory/uat.yml playbooks/site.yaml
+```
+
