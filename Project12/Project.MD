@@ -179,9 +179,9 @@ However we need to note that the point of entry to teh ansible configuration is 
 ```
 
 ## Commit and test
-At this point after all configuration and step up within the playbooks we need to commit/push all teh configuratiosn into our Github and merge to the main branch.
+At this point after all configuration and step up within the playbooks we need to commit/push all the configuration into our Github and merge to the main branch.
 
-After successful push and merge to the master branch we cd to the ansible-config-mgt folder and run our ansible playbook.
+After successful push and merge to the master branch(main), cd to the ansible-config-mgt folder and run our ansible playbook.
 ```
 cd /home/ubuntu/ansible-config-mgt
 
