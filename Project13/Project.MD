@@ -83,3 +83,53 @@ Using a loop **with_first_found** implies that looping through the list of files
 - name: Webserver assignment
   import_playbook: ../static-assignments/webservers.yml
 ```
+## Update site.yml with dynamic assignments
+**Download Mysql Ansible Role**
+For this project we will be using **MySQL role developed by geerlinggy**. To install the role cd to the **ansible-config-mgt** directory and run the below command.
+```
+git init
+git pull https://github.com/<your-name>/ansible-config-mgt.git
+git remote add origin https://github.com/<your-name>/ansible-config-mgt.git
+git branch roles-feature
+git switch roles-feature
+```
+
+Inside the **roles** directory install **ansible-galaxy install geerlinggy.mysql** and rename the folder by running **mv geerlingguy.mysql/ mysql**
+
+Upload the changes to GitHub by running the below command, and create a Pull request and merge to the main branch in Github.
+```
+git add .
+git commit -m "Commit new role files into GitHub"
+git push --set-upstream origin roles-feature
+```
+
+From the roles we have two Load Balancer to use **Nginx** or **Apache**, we can choose which to of the load balancer to use by adding a condition.
+
+**NOTE** Declere a variable in **defaults/main.yml** file inside the Nginx and Apache roles. Name each variables **enable_nginx_lb** and **enable_apache_lb** respectively by setting both values to false **enable_nginx_lb: false** and **enable_apache_lb: false**, set **load_balancer_is_required** value to false.
+
+Update both assignment and site.yml files respectively with the below:
+
+**loadbalancers.yml** file update with the below:
+```
+- hosts: lb
+  roles:
+    - { role: nginx, when: enable_nginx_lb and load_balancer_is_required }
+    - { role: apache, when: enable_apache_lb and load_balancer_is_required }
+```
+
+On the **env-vars\uat.yml** file we define which loadbalancer to use in the UAT environment, by setting the value to **true**. To activate and teh loadbalncer and enable **nginx** we use the below settings as same also work for **apache** loadbalancer just to switch the respective environment to **true** and the other **false**.
+```
+enable_nginx_lb: true
+load_balancer_is_required: true
+```
+
+
+**site.yml** update with the below:
+```
+     - name: Loadbalancers assignment
+       hosts: lb
+         - import_playbook: ../static-assignments/loadbalancers.yml
+        when: load_balancer_is_required 
+```
+
+To test the configuration run each of the environment and run Ansible against each environment.
