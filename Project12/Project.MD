@@ -7,24 +7,28 @@ In this project we I will be refactoring ansible code, create assignments, and u
 However to start this project we need to make some changes to our Jenkins job such that every new changes in the code creates a seperate directory which will be saved in the jenkins server, although this would consume a lot of space by saving all builds, but however to solve this its advisable to allow for a specific number of builds-this set up will make more sense during the project execution.
 
 ## **Step:1-Jenkins Job Enhancement**
-1. On the Jenkins-Ansible server, create a new directory called ansible-config-artifact as this will store the artifacts after each builds and change the permission as thiw will give jenkins the access to the directory created.
+1. On the Jenkins-Ansible server, create a new directory called **ansible-config-artifact** as this will store the artifacts after each builds and change the permission as thiw will give jenkins the access to the directory created.
 ```
 sudo mkdir /home/ubuntu/ansible-config-artifact
 sudo chmod -R 0777 /home/ubuntu/ansible-config-artifact
 ```
 
-2. Follow the below steps to install teh copy artifacts plugins in jenkins.
+2. Follow the below steps to install the copy artifacts plugins in jenkins.
 * Go to Jenkins web console 
 * Manage Jenkins
-* Manage Plugins 
+* Plugins 
 * Avaliable 
-* Copy artifacts, install the plugins.
+* Serch and select Copy artifacts, install the plugins.
+![Alt text](<Images/copy artifacts successfully installed.png>)
 
-3. Create a Freestyle project and name it save_artifacts, and configure the settings as seen in the below screenshots
+3. Create a Freestyle project and name it **save_artifacts**, and configure the settings as seen in the below screenshots
 
 4. The main idea save_artifacts project is to save the artifacts in the created directory **/home/ubuntu/ansible-config-artifact** and to achieve this set see the steps in the below screeshots as it specifies the build steps and source project **ansible** and target directory **/home/ubuntu/ansible-config-artifact**.
 
+
 5. To confirm that the jenkins set up is fine and working as expected we can make some changes on the README.md file on our Github to see if the changes was successfully build and saved on the save_artifacts. see below screenshot.
+![Alt text](<Images/jenkins build .png>)
+![Alt text](<Images/save artifacts build successfully.png>)
 
 ## Step:2-Refactor Ansible code by importing other playbooks into site.yml
 1. In this step 2 we see how code reuse applies by importing other playbooks. Withing the **playbook** folder, create a new file and name it **site.yml**
@@ -48,6 +52,8 @@ The folder structure of all the created folders and file should look like the be
 └── playbooks
     └── site.yml
 ```
+![Alt text](<Images/build set up after refactor.png>)
+![Alt text](<Images/ansible build was successfull.png>)
 
 However in other to delete the already installed wireshark on my instance from previous project, I will need to create another playbook under **static-assignments** and name it **common-del.yml**. In this playbook we configure the deletion of **wireshark** utility by adding the below code to the **common-del.yml** playbooks.
 ```
@@ -159,6 +165,8 @@ After creating it your file structure should look like the tree structure below:
 The above code installs and configure Apache(https service), clone the tooling website from GitHub, ensure that teh tooling website code is deployed to **/var/www/html** on each of the UAT Webservsers.
 
 To achieve this an **ssh agent** must bs set up on both UAT Webservers to communication and access to allow installation and configuration of the **httpd service**. 
+![Alt text](<Images/added ssh key and connect terminal working.png>)
+![Alt text](<Images/ssh into different uat servers.png>)
 
 ## Step: 4-Referencing Webserver role
 Within the **static-assignments** folder, create a new assignment for the uat-webservers **uat-webservers.yml**, this file is where you reference the role using the below playbook:
@@ -187,4 +195,7 @@ cd /home/ubuntu/ansible-config-mgt
 
 ansible-playbook -i inventory/uat.yml playbooks/site.yaml
 ```
+![Alt text](<Images/ansible playbook ran successfully correct.png>)
 
+
+# Thank You.
