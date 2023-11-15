@@ -12,6 +12,7 @@ However to start this project we need to make some changes to our Jenkins job su
 sudo mkdir /home/ubuntu/ansible-config-artifact
 sudo chmod -R 0777 /home/ubuntu/ansible-config-artifact
 ```
+* **N/B**: For the Project my build artifacts location is `/var/lib/jenkins/workspace/ansible-config-artifact`
 
 2. Follow the below steps to install the copy artifacts plugins in jenkins.
 * Go to Jenkins web console 
@@ -22,6 +23,10 @@ sudo chmod -R 0777 /home/ubuntu/ansible-config-artifact
 ![Alt text](<Images/copy artifacts successfully installed.png>)
 
 3. Create a Freestyle project and name it **save_artifacts**, and configure the settings as seen in the below screenshots
+![Alt text](Images/jenkins1.png)
+![Alt text](Images/Jenkins2.png)
+![Alt text](Images/Jenkins3.png)
+
 
 4. The main idea save_artifacts project is to save the artifacts in the created directory **/home/ubuntu/ansible-config-artifact** and to achieve this set see the steps in the below screeshots as it specifies the build steps and source project **ansible** and target directory **/home/ubuntu/ansible-config-artifact**.
 
