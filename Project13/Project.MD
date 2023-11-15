@@ -139,4 +139,8 @@ load_balancer_is_required: true
 
 To test the configuration run each of the environment and run Ansible against each environment.
 
-Thank You.
+`ansible-playbook -i inventory/uat.yml playbooks/site.yml`
+
+
+
+# Thank You.
