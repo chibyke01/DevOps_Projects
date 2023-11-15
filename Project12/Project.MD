@@ -117,6 +117,7 @@ After creating it your file structure should look like the tree structure below:
     │   └── main.yml
     └── templates
 ```
+![Alt text](Images/tree.png)
 
 3. Update the inventory **ansible-config-mgt/inventory/uat.yml** file with the Private IP addresses of the two UAT Web servers as show below:
 ```
