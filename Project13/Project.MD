@@ -41,6 +41,8 @@ The below tree structure shows a complete tree folder structure required for thi
     └── common.yml
     └── webservers.yml
 ```
+![Alt text](<Images/dynamic assignment set up on vscode.png>)
+![Alt text](<Images/all builds updates successfully to my jenkins .png>)
 
 The below instruction will be saved in **env-vars.yml** file
 ```
@@ -93,6 +95,7 @@ git remote add origin https://github.com/<your-name>/ansible-config-mgt.git
 git branch roles-feature
 git switch roles-feature
 ```
+![Alt text](<Images/git init.png>)
 
 * Inside the **roles** directory install **ansible-galaxy install geerlinggy.mysql** and rename the folder by running **mv geerlingguy.mysql/ mysql**
 
@@ -102,6 +105,8 @@ git add .
 git commit -m "Commit new role files into GitHub"
 git push --set-upstream origin roles-feature
 ```
+![Alt text](<Images/git init2.png>)
+![Alt text](<Images/Pull request for project 13.png>)
 
 From the roles we have two Load Balancer to use **Nginx** or **Apache**, we can choose which to of the load balancer to use by adding a condition.
 
@@ -133,3 +138,5 @@ load_balancer_is_required: true
 ```
 
 To test the configuration run each of the environment and run Ansible against each environment.
+
+Thank You.
