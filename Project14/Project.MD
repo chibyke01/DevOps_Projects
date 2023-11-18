@@ -148,8 +148,8 @@ Here are the drawbacks/ cons of the classful IP addressing method:
 
 ## Advanced Topices in IP Addressing
 This involves the study of advanced technologies and techniques for managing and optimizing  performance, these may include:
-* Routing protocols: routing protocol specifies how routers communicate with each other to distribute information that enables them to select paths between nodes on a computer network, can also be  rules that routers use to communicate and find the best paths for data packets across networks.
-* Virtual Private Networks(VPNs): A virtual private network, or VPN, is an encrypted connection over the Internet from a device to a network. The encrypted connection helps ensure that sensitive data is safely transmitted. It prevents unauthorized people from eavesdropping on the traffic and allows the user to conduct work remotely. 
-* Quality of Service(QoS): Set of technologies and techniques that are used to manage and optimize network performance
-* Domain Name System (DNS): The Domain Name System (DNS) is the Internet's system for mapping alphabetic names to numeric Internet Protocol (IP) addresses like a phone book maps a person's name to a phone number.
-* Network Address Translation (NAT): It’s a way to map multiple private addresses inside a local network to a public IP address before transferring the information onto the internet. 
+* **Routing protocols:** routing protocol specifies how routers communicate with each other to distribute information that enables them to select paths between nodes on a computer network, can also be  rules that routers use to communicate and find the best paths for data packets across networks.
+* **Virtual Private Networks(VPNs):** A virtual private network, or VPN, is an encrypted connection over the Internet from a device to a network. The encrypted connection helps ensure that sensitive data is safely transmitted. It prevents unauthorized people from eavesdropping on the traffic and allows the user to conduct work remotely. 
+* **Quality of Service(QoS):** Set of technologies and techniques that are used to manage and optimize network performance
+* **Domain Name System (DNS):** The Domain Name System (DNS) is the Internet's system for mapping alphabetic names to numeric Internet Protocol (IP) addresses like a phone book maps a person's name to a phone number.
+* **Network Address Translation (NAT):** It’s a way to map multiple private addresses inside a local network to a public IP address before transferring the information onto the internet. 
