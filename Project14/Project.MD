@@ -160,9 +160,9 @@ This involves the study of advanced technologies and techniques for managing and
 
 **Types of VPN**
 * **Remote Access VPNs:** Allows user to connect to a private network remotely.
-**Site-to-site VPNs:** It allows organisations to connect to mulitiple sites over the publice network, such as internet  to create a single private network.
-**Mobile VPNs:** Allows users to securely connect to a private network using a laptop or mobile device.
-**Virtual LAN(VLAN) VPNs:** This allows user to create virtual networks within a larger network, segment traffic and improve security.
+* **Site-to-site VPNs:** It allows organisations to connect to mulitiple sites over the publice network, such as internet  to create a single private network.
+* **Mobile VPNs:** Allows users to securely connect to a private network using a laptop or mobile device.
+* **Virtual LAN(VLAN) VPNs:** This allows user to create virtual networks within a larger network, segment traffic and improve security.
 
 3. **Quality of Service(QoS):** Set of technologies and techniques that are used to manage and optimize network performance
 4. **Domain Name System (DNS):** The Domain Name System (DNS) is the Internet's system for mapping alphabetic names to numeric Internet Protocol (IP) addresses like a phone book maps a person's name to a phone number.
