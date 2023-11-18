@@ -149,7 +149,21 @@ Here are the drawbacks/ cons of the classful IP addressing method:
 ## Advanced Topices in IP Addressing
 This involves the study of advanced technologies and techniques for managing and optimizing  performance, these may include:
 * **Routing protocols:** routing protocol specifies how routers communicate with each other to distribute information that enables them to select paths between nodes on a computer network, can also be  rules that routers use to communicate and find the best paths for data packets across networks.
+
+**Types of Routing Protocols**
+* **Distance Vector Routing Protocols:** This type of protocol use a distance metric to determine the best path of a destination.
+* **Link-State Routing Protocols:** These protocols maintains a database of the entire network topology and use this information to determine the best path to a destination.
+* **Hybrid Routing Protocols:** This protocol combine elements of distance vector and link-state protocols.
+* **Path Vector Routing Protocols:** These protocols use a path vector(a list of autonomous systems that a route traverses) to determine the best path to a destination.
+
 * **Virtual Private Networks(VPNs):** A virtual private network, or VPN, is an encrypted connection over the Internet from a device to a network. The encrypted connection helps ensure that sensitive data is safely transmitted. It prevents unauthorized people from eavesdropping on the traffic and allows the user to conduct work remotely. 
+
+**Types of VPN**
+* **Remote Access VPNs:** Allows user to connect to a private network remotely.
+**Site-to-site VPNs:** It allows organisations to connect to mulitiple sites over the publice network, such as internet  to create a single private network.
+**Mobile VPNs:** Allows users to securely connect to a private network using a laptop or mobile device.
+**Virtual LAN(VLAN) VPNs:** This allows user to create virtual networks within a larger network, segment traffic and improve security.
+
 * **Quality of Service(QoS):** Set of technologies and techniques that are used to manage and optimize network performance
 * **Domain Name System (DNS):** The Domain Name System (DNS) is the Internet's system for mapping alphabetic names to numeric Internet Protocol (IP) addresses like a phone book maps a person's name to a phone number.
 * **Network Address Translation (NAT):** It’s a way to map multiple private addresses inside a local network to a public IP address before transferring the information onto the internet. 
