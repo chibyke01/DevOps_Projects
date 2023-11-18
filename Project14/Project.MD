@@ -1,6 +1,11 @@
 # UNDERSTANDING IP ADDRESSES AND CIDR NOTATION
 
 Understanding networking is a fundamental part of configuring complex environments on the internet. This has implications when trying to communicate between servers efficiently, developing secure network policies, and keeping your nodes organized.
+
+IP address works in an IP network like a postal address. For example, a postal address combines two addresses, address, or your area your house address.
+The address or your area is a group address of all houses that belong to a specific area. The house address is the unique address of your homes in that area. Here, your area is represented by a PIN code number.
+In this example, the network address comprises all hosts which belong to a specific network. The host address is the unique address of a particular host in that network.
+
 In this project we are going to discuss some more specific concepts that are involved with designing or interacting with networked computers. Specifically, we will be covering network classes, subnets, and CIDR notation for grouping IP addresses.
 
 ## INTRODUCTION TO IP ADDRESSES
@@ -89,14 +94,8 @@ CIDR addresses are represented using a slash notation, which specifies the numbe
 
 **Basic Usage**
 
-IP Address Aggregation Tool accepts various IP address formats for input (scroll to Input Format Examples for more details). Enter IP Address list in a block of text (one IP Address or range per line) into IP Address Ranges input area. Select desired output format and click submit button. It will automatically discard any non-recognized or invalid address text. To use the IP aggregator click this link: https://tehnoblog.org/ip-tools/ 
+IP Address Aggregation Tool accepts various IP address formats for input (scroll to Input Format Examples for more details). Enter IP Address list in a block of text (one IP Address or range per line) into IP Address Ranges input area. Select desired output format and click submit button. It will automatically discard any non-recognized or invalid address text. To use the IP aggregator click this link [IP tools](https://tehnoblog.org/ip-tools/)
 
-IP Address Classes and Provate IP Address Ranges
-https://www.guru99.com/ip-address-classes.html
-How does IP address work?
-IP address works in an IP network like a postal address. For example, a postal address combines two addresses, address, or your area your house address.
-The address or your area is a group address of all houses that belong to a specific area. The house address is the unique address of your homes in that area. Here, your area is represented by a PIN code number.
-In this example, the network address comprises all hosts which belong to a specific network. The host address is the unique address of a particular host in that network.
 
 **Classful Addressing**
 Classful addressing is a network addressing the Internet’s architecture from 1981 till Classless Inter-Domain Routing was introduced in 1993.
