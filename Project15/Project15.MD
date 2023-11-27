@@ -123,6 +123,7 @@ Go to Subnet associations tab and click **Edit subnet associations** and check t
 
 From above step by step setup can be seen in the below screenshot and we have seen how these configurations can be used to maintain security while allowing necessary internet access for the resources.
 ![Alt text](<Images/creating NAT gateway.png>)
+![Alt text](<Images/NAT subnet savings.png>)
 ![Alt text](<Images/adding NAt to the private subnet.png>)
 ![Alt text](<Images/Edit association for NAT private subnets.png>)
 
