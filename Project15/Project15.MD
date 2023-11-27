@@ -101,28 +101,33 @@ Next go to "Subnet associations" tab and click "Edit subnet associations"
 
 
 NAT Gateway and Private Subnets
-Introduction to Private Subnets and NAT Gateway
+----------------------------------
+**Introduction to Private Subnets and NAT Gateway**
 
 In AWS Virtual Private Cloud(VPC), private subnets are secluded areas where you can place resources that should not be directly exposed to the internet, but if the resources wants to access the internet for updates or downloads that is when the NAT Gateway comes in.
 
-Network Address Translation(NAT) allows instances in the private subnet to connect to the outside services but restricts external services to connecting to these instances.
+**Network Address Translation(NAT**) allows instances in the private subnet to connect to the outside services but restricts external services to connecting to these instances.
 
 Creating a NAT Gateway and Linking it to a Private Subnet
-Go to VPC
-NAT Gateway 
-Click Create NAT Gateway 
-Give it a name
-On the Subnet Tab choose the created private subnet
-Allocate an Elastic IP as this required for the creation of NAT gateway.
+------------------------------------------
+1. Go to VPC
+2. NAT Gateway 
+3. Click Create NAT Gateway 
+4. Give it a name
+5. On the Subnet Tab choose the created private subnet
+6. Allocate an Elastic IP as this required for the creation of NAT gateway.
 
-Create a Route table by editing the route table to add a default route to the NAT Gateway.
+Create a Route table by editing the route table to **add a default** route to the NAT Gateway.
 
-Go to Subnet associations tab and click Edit subnet associations and check the two private subnets.
+Go to Subnet associations tab and click **Edit subnet associations** and check the two private subnets.
 
-From the above setup we have seen how these configurations can be used to maintain security while allowing necessary internet access for the resources.
-
+From above step by step setup can be seen in the below screenshot and we have seen how these configurations can be used to maintain security while allowing necessary internet access for the resources.
+![Alt text](<Images/creating NAT gateway.png>)
+![Alt text](<Images/adding NAt to the private subnet.png>)
+![Alt text](<Images/Edit association for NAT private subnets.png>)
 
 Security Group and Network ACLs
+----------------------------------
 Understanding the Difference between Security Groups and Newtwork Access Control List (NACLs)
 Security Group (Add diagram) These are for controlling user access to resources, a security group examines the IP addresses and ports of incoming and outgoing network traffic, it acts as a virtual firewall that filters traffice based on predefined rules. These rules specifies which type of traffic are allowed or denied.
 
