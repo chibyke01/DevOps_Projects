@@ -50,30 +50,31 @@ subnet-private2b eu-north-1b 10.0.2.0/24
 After creating these subnets we can deploy our EC2 instances into the created VPC by selection one of the subnets, but the public subnet does not have any internet access at this stage. 
 
 Unstanding Public and Private Subnets in AWS VPC.
-------------------------------------------------
-In the world of AWS VPC, subnets can be likened to be a plots on a land(VPC) and these plot(subnets) have a direct road access (internet access) - these can be said to be Public subsets. others are more private or with no direct road access which can be likened to be Private Subnets.
+---------------------------------------------
+In the world of AWS VPC, subnets can be likened to be a plots on a land(VPC) and these plots(subnets) have a direct road access (internet access) - these can be said to be Public subsets. others are more private or with no direct road access which can be likened to be Private Subnets.
 
-Creating a Public Subnets
+* Creating a Public Subnets
 -------------------------
-Go to the AWS VPC page 
-Find Subnets click on it, then Create subnet
+1. Go to the AWS VPC page 
+2. Find Subnets click on it, then Create subnet
 Give it a name 
-Attach an internet Gatway to the subnet to provide internet access
+3. Attach an internet Gatway to the subnet to provide internet access
 Update the route table associated with the subnet to allow to flow to and from the internet.
 
-Creating a Private Subnet
+* Creating a Private Subnet
 -------------------------
-Go to the AWS VPC page 
-Find Subnets click on it, then click subnet, give it a name  and leave the IP settings as they are.
-Do not attach an internet Gatway to the subnet to provide internet access
+1. Go to the AWS VPC page 
+2. Find Subnets click on it, then click subnet, give it a name  and leave the IP settings as they are.
+3. Do not attach an internet Gatway to the subnet to provide internet access
 Update the route table associated with the subnet to allow to flow to and from the internet.
 
-Public subnets are great for resources that needs to connect to the internet =, like webservers while Private subnets are great for resources that you dont want to be exposed to the internet like databases.
+Public subnets are great for resources that needs to connect to the internet, like webservers while Private subnets are great for resources that you dont want to be exposed to the internet like databases.
+
+N/B - One of the major difference is that while creating a public subnet you attached an internet gateway as its an interfacing subnet while for private you do not attached an internat gateway as you want to restric access from it.
 
 Internet Gaetway and Routing Table
 ---------------------------------
-What is Internet Gateway
-Internet Gateway is a VPC component that allows communication between your VPC and the internet. It supports IPv4 and IPv6 traffic. It does not cause availability risks or bandwidth constraints on your network traffic.
+**Internet Gateway(IGW)** is a VPC component that allows communication between your VPC and the internet. It supports IPv4 and IPv6 traffic. It does not cause availability risks or bandwidth constraints on your network traffic.
 
 Technically the created subnets are still private this will be made public by attaching an internet Gateway to it and this follows the below systematical order as listed below:
 * An internet Gateway (IGW) attached to VPC
@@ -81,19 +82,22 @@ Technically the created subnets are still private this will be made public by at
 * Public IP assigned to the AWS resources (e.g., EC2 instances)
 
 To create the IGW follow the steps as shown in the screenshot.
-Go to VPC, Internet Gateways and click Create internet gateway.
+Go to VPC, Internet Gateways and click on create internet gateway.
+![Alt text](<Images/creating internet gateway.png>)
 
-What is Routing Table? - routing table, or routing information base (RIB), is a data table stored in a router or a network host that lists the routes to particular network destinations, and in some cases, metrics (distances) associated with those routes. The routing table contains information about the topology of the network immediately around it. In the context of this project we can say its a map guilding your resources on how to get to in and our of the VPC.
+**What is Routing Table** - routing table, or routing information base (RIB), is a data table stored in a router or a network host that lists the routes to particular network destinations, and in some cases, metrics (distances) associated with those routes. The routing table contains information about the topology of the network immediately around it. In the context of this project we can say its a map guilding your resources on how to get in and out of the VPC.
 
 Creating and Configuring Routing Tables
-
+----------------------------------------
 Once its created, edit the route table add a default route to the Internet Gateway(IGW) as shown below:
+![Alt text](<Images/create publice route table.png>)
+![Alt text](<Images/route table created.png>)
 
 Next go to "Subnet associations" tab and click "Edit subnet associations"
 
-Note: 
-test-vpc-public-rtb: A route table with a target to Internet gateway is a publice route table
-test-vpc-private-rtb: A route table with a target to NAT gateway is a private route table
+**N/B:** 
+**test-vpc-public-rtb:** A route table with a target to Internet gateway is a public route table
+**test-vpc-private-rtb:** A route table with a target to NAT gateway is a private route table
 
 
 NAT Gateway and Private Subnets
