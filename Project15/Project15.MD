@@ -16,12 +16,16 @@ The main steps to creating a VPC and configuring core networks services are cove
 
 **The Default VPC** - It is just like a starter pack that is preconfigured within the Amazon cloud where you can start deploying applications or services, it is a built-in security and network settings to help get started but can be adjusted to fit your personal configuration.
 
-**Creating a new VPC** - This is process involves setting up your choice configuration for the VPC. In the course of this project we will be using the **VPC only** option as VPC and more option will be later.
-Enter the name tag as **"first-vpc"** and **"10.0.0.0/16"** as the **IPv4 CIDR**. The "10.0.0.0/16" will be the **primary IPv4 block** and **"100.64.0.0/16"** can be added as the **secondary IPv4** block e.g., the secondary CIDR block can be used when running out of IPs and the need to add additional blocks or when there is a VPC with overlapping CIDR which will need to be connected or peer.
+**Creating a new VPC** - This is process involves setting up your choice configuration for the VPC. In the course of this project we will be using the **VPC only** option as VPC and more option will be used later.
+
+To create a new **VPC** kindly follow the steps: enter the name tag as **"first-vpc"** and **"10.0.0.0/16"** as the **IPv4 CIDR**. The "10.0.0.0/16" will be the **primary IPv4 block** and **"100.64.0.0/16"** can be added as the **secondary IPv4** block e.g., the secondary CIDR block can be used when running out of IPs and the need to add additional blocks or when there is a VPC with overlapping CIDR which will need to be connected or peer.
    
-See the below screenshots on how to create a VPC
+See the below screenshots showing steps on how to create a VPC
+![Alt text](<Images/creating VPC.png>)
 
 As soon as the VPC is created a **vpc-id** is assigned and a **route table** is created automatically that serves as the main route table **(rtb)**
+![Alt text](<Images/Creating VPS2.png>)
+
 At this we have VPC and route table created but wont be able to put anything inside however if we try to create an EC2 instance we cant proceed as it requires subnets. 
 
 Creating and Configuring Subnets
@@ -29,10 +33,11 @@ Creating and Configuring Subnets
 **What is Subnets?** - Subnets are like smaller segements within a VPC that helps organize and manager resources, they are created to organize and manager network effectively.
 
 Follow the below steps to create the Subnet
-Go to VPC
-Subnets
-Create subnets and select the VPC that was created
-However if you do not choose a zone it will automatically or rondomly pick a zone for you buy AWS.
+1. Go to VPC
+2. Subnets
+3. Create subnets and select the VPC that was created.
+
+However if you do not choose a zone it will automatically or rondomly pick a zone for you buy AWS, but for the course of this project the below are information for public and private subnets to be used.
 
 ```
 subnet-public1a eu-north-1a 10.0.11.0/24
@@ -40,6 +45,7 @@ subnet-public2b eu-north-1b 10.0.12.0/24
 subnet-private1a eu-north-1a 10.0.1.0/24
 subnet-private2b eu-north-1b 10.0.2.0/24
 ```
+![Alt text](<Images/creating subnet1.png>)
 
 After creating these subnets we can deploy our EC2 instances into the created VPC by selection one of the subnets, but the public subnet does not have any internet access at this stage. 
 
